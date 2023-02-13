@@ -5,16 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float forwardForce = 4000f;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.AddForce(0, 0, 2000 * Time.deltaTime);    
+        rb.AddForce(0, 0, forwardForce * Time.deltaTime);    
     }
 }
