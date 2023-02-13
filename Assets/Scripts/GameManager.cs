@@ -10,10 +10,15 @@ public class GameManager : MonoBehaviour
     private bool gameOver = false;
 
     [SerializeField] private float restartDelay = 1f;
-
+    [SerializeField] private GameObject levelComplete;
     void Awake()
     {
         instance = this;    
+    }
+
+    public void CompleteLevel()
+    {
+        levelComplete.SetActive(true);
     }
 
     public void EndGame()
