@@ -11,8 +11,8 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.collider.CompareTag("Obstacle"))
         {
-            Debug.Log("Hit Obstacle");
             movement.enabled = false;
+            GameManager.instance.EndGame();
         }
     }
 }

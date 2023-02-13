@@ -8,6 +8,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float forwardForce = 4000f;
     [SerializeField] private float sidewaysForce = 500f;
 
+    void Update()
+    {
+        if(gameObject.transform.position.y < -3f )
+        {
+            GameManager.instance.EndGame();
+        }    
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
